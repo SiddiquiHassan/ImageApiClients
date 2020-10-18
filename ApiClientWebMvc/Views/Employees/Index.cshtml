@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Employees</h2>
+
+<a class="btn btn-primary btn-lg" href="#" style="margin-bottom:5px">Add New Employee</a>
+
+<table id="employees" class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Phone No.</th>
+            <th>Address</th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+
+@section scripts
+{
+    <script>
+        debugger;
+        $(document).ready(function () {
+            console.log("jquery running")
+            $("#employees").DataTable({
+                ajax: {
+                    url: "http://localhost:8083/api/emp",
+                    dataSrc: ""
+                },
+                columns: [
+                    {
+                        data: "name",
+                        render: function (data, type, employee) {
+                            return "<a href='#" + employee.id + "'>" + data + "</a>";
+                        }
+                    },
+                    {
+                        data: "age"
+                    },
+                    {
+                        data: "phoneNo"
+                    },
+                    {
+                        data: "address"
+                    }
+                ]
+            });
+            console.log('jquery runned!');
+        });
+    </script>
+}
