@@ -18,31 +18,30 @@ namespace ApiClient
 
         private async void button1_Click(object sender, EventArgs e)
         {
-            DataSet dataSet = null;
+            DataSet dataSet;
             try
             {
                 var client = new HttpClient();
                 client.BaseAddress = new Uri("http://localhost:8083/");
-                var response = await client.GetAsync("api/emp/5");
+                var response = await client.GetAsync("api/emp/1");
                 var result = await response.Content.ReadAsStringAsync();
                 dataSet = JsonConvert.DeserializeObject<DataSet>(result);
-                pb.Image = getImage(dataSet.Tables[0].Rows[0]["Photo"].ToString());
+                pb.Image = GetImage(dataSet.Tables[0].Rows[0]["Photo"].ToString());
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
                 throw;
             }
         }
 
-        private Image getImage(string imageStr)
+        private Image GetImage(string imageStr)
         {
             byte[] array = Convert.FromBase64String(imageStr);
             MemoryStream ms = new MemoryStream(array);
             return Image.FromStream(ms);//Exception occurs here
         }
 
-        private byte[] imageToByteArray(Image image)
+        private byte[] ImageToByteArray(Image image)
         {
             using (MemoryStream ms = new MemoryStream())
             {
@@ -63,17 +62,16 @@ namespace ApiClient
                     age = tbAge.Text,
                     address = tbAddress.Text,
                     phoneNo = tbPhoneNo.Text,
-                    image = imageToByteArray(pb.Image)
+                    image = ImageToByteArray(pb.Image)
                 });
                 client.BaseAddress = new Uri("http://localhost:8083/");
                 var response = await client.PostAsync("api/emp/", new StringContent(content, System.Text.Encoding.UTF8, "application/json"));
                 var result = await response.Content.ReadAsStringAsync();
                 MessageBox.Show(result);
-                nullControls();
+                NullControls();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
                 throw;
             }
         }
@@ -86,7 +84,7 @@ namespace ApiClient
                 pb.Image = new Bitmap(ofd.FileName);
         }
 
-        private void nullControls()
+        private void NullControls()
         {
             pb.Image = null;
             tbName.Text = "";

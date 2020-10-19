@@ -11,3 +11,16 @@ C:\Users\Hassan Siddiqui\Documents\Visual Studio 2017\Projects\ApiClient\ApiClie
 C:\Users\Hassan Siddiqui\Documents\Visual Studio 2017\Projects\ApiClient\ApiClient\obj\Debug\ApiClient.exe
 C:\Users\Hassan Siddiqui\Documents\Visual Studio 2017\Projects\ApiClient\ApiClient\obj\Debug\ApiClient.pdb
 C:\Users\Hassan Siddiqui\Documents\Visual Studio 2017\Projects\ApiClient\ApiClient\obj\Debug\ApiClient.csprojAssemblyReference.cache
+C:\Users\admin\source\repos\ImageApiClients\ApiClient\bin\Debug\ApiClient.exe.config
+C:\Users\admin\source\repos\ImageApiClients\ApiClient\bin\Debug\ApiClient.exe
+C:\Users\admin\source\repos\ImageApiClients\ApiClient\bin\Debug\ApiClient.pdb
+C:\Users\admin\source\repos\ImageApiClients\ApiClient\bin\Debug\Newtonsoft.Json.dll
+C:\Users\admin\source\repos\ImageApiClients\ApiClient\bin\Debug\Newtonsoft.Json.xml
+C:\Users\admin\source\repos\ImageApiClients\ApiClient\obj\Debug\ApiClient.csprojAssemblyReference.cache
+C:\Users\admin\source\repos\ImageApiClients\ApiClient\obj\Debug\ApiClient.Form1.resources
+C:\Users\admin\source\repos\ImageApiClients\ApiClient\obj\Debug\ApiClient.Properties.Resources.resources
+C:\Users\admin\source\repos\ImageApiClients\ApiClient\obj\Debug\ApiClient.csproj.GenerateResource.cache
+C:\Users\admin\source\repos\ImageApiClients\ApiClient\obj\Debug\ApiClient.csproj.CoreCompileInputs.cache
+C:\Users\admin\source\repos\ImageApiClients\ApiClient\obj\Debug\ApiClient.csproj.CopyComplete
+C:\Users\admin\source\repos\ImageApiClients\ApiClient\obj\Debug\ApiClient.exe
+C:\Users\admin\source\repos\ImageApiClients\ApiClient\obj\Debug\ApiClient.pdb
